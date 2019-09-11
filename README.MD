@@ -16,9 +16,9 @@ HTML is based around using `tags` to establish an element.
 
 Above we have the basic syntax structure for an HTML tag.
 
-1. We first have the tag itself, the tag uses `<>` angle brackets to delcare that it is an HTML tag.
+1. We first have the tag itself, the tag uses `<>` angle brackets to declare that it is an HTML tag.
 2. The tag comes in a pair, an opening and closing tag. The closing tag begins with a `</>` to declare that it is ending the HTML tag.
-3. Between the angle brackets, is where we will decide what tag we are using.
+3. Between the angle brackets is where we will decide what tag we are using.
 4. We wrap the tags around the content that we want stored inside that HTML element.
 
 Some tags can be self closing or `void`.
@@ -49,11 +49,11 @@ Lets breakdown the structure from above:
 
 `<html>` - The html tag tells the browser that everything inside should be read as html and will act as the root tag for our file. (meaning everything will go in here). We have also added an attribute to the tag to declare what language we are using. We will talk about attributes later on in the notes.
 
-`<head>` - The head tag is a container used to contain metadeta (data about data). Metadata usually defines the title of the document, character set, etyc. Metadata is not displayed to the web page.
+`<head>` - The head tag is a container used to contain metadata (data about data). Metadata usually defines the title of the document, character set, etyc. Metadata is not displayed to the web page.
 
 `<title>` - This is a metadata tag that will provide the title of our document.
 
-`body` - The body tag is the container for all the elements that will make up our web page. Everything inside of our body tag will be displayed to the web page. This is where we will store our elements such as divs, spans, hyperlinks, text, etc.
+`<body>` - The body tag is the container for all the elements that will make up our web page. Everything inside of our body tag will be displayed to the web page. This is where we will store our elements such as divs, spans, hyperlinks, text, etc.
 
 ### Comments In HTML
 
@@ -79,11 +79,11 @@ Meta tags need to be placed inside the `<head>` tag of your file.
     <!-- charset determines the letter of the alphabet and characters used -->
     <meta name="description" content="best website ever made">
     <!-- the description will show up on a search engine as a primary description -->
-    <meta name="keywords" content="cool website me mine this is cool check it out">
+    <meta name="keywords" content="cool,website,me,mine,this is cool check it out">
     <!-- keyowrds are used to help the search engine recognize what words could help find your site-->
     <meta name="author" content="tayte stokes">
     <!-- author shows who created the website -->
-    <meta name="viewport" ontent="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- view port will tell the browser what device is using the website and adjust for mobile design -->
 </head>
 ```
@@ -104,9 +104,9 @@ There are many different tags that we can use to creat HTML elements. Here, we w
 
 #### Heading Tags
 
-Header tags are used to declare that the content inside of the brackets are going to be headers for a section on our web page.
+Heading tags are used to declare that the content inside of the brackets are going to be headers for a section on our web page.
 
-There are 6 different header tags that are available to us. The lower the number for the tag, the more important of a header it is.
+There are 6 different heading tags that are available to us. The lower the number for the tag, the more important of a heading it is.
 
 ```html
 <h1>Heading One</h1>
@@ -135,15 +135,23 @@ The `<div>` tag represents a division or a section within our web page. This tag
 </div>
 ```
 
+A semantic alternative to the `<div>` tag would be the `<section>` tag. It is used exactly the same way that you would use a `<div>` tag, and is used to denote a section of code.
+
+```html
+<section>
+    <p>I'm using a section tag to create a division within my web page to house a paragraph tag</p>
+</section>
+```
+
 #### Span Tags
 
-The `<span>` tag is used to group inline-element in our document. The span tag does not apply any visual changes to our how structure of elements.
+The `<span>` tag is used to group inline-element in our document. The span tag does not apply any visual changes to our structure of elements.
 
 We also use span tags as `hooks` inside of our text to apply specific styling or functionality to a word in our text.
 
 ```html
 <span>
-    <p>I'm a <span>paragraph</span> tag inside of a span!
+    <p>I'm a <span>paragraph</span> tag inside of a span!</p>
 </span>
 ```
 
@@ -167,7 +175,7 @@ Other common elements that have a `block` display by default:
 
 #### Inline Level
 
-Inline level elements *DOES NOT* start on a new line and will only take up as much width as needed.
+Inline level elements *DO NOT* start on a new line and will only take up as much width as needed.
 
 For example: the `<span>` tag is a common `inline` display element.
 
@@ -180,7 +188,7 @@ Other common elements that have an `inline` display by default:
 
 ### Tag Attributes
 
-Attributes are used in HTML to provide extra information to a tag. All tags can have attriubutes and will always be placed in the opening or start tag.
+Attributes are used in HTML to provide extra information to a tag. All tags can have attributes and will always be placed in the opening or start tag.
 
 Basic Syntax for an attribute:
 
@@ -199,9 +207,9 @@ Common attributes:
 * `height` - height is another common one used with image tags to determine the height of the image
 * `width` - width is another one commonly used with image tags to determine the width of an image
 
-### Seperation Tags
+### Separation Tags
 
-There are tags we can use to create a seperation between our elements. The tags we can use are `<hr>` and `<hr>`.
+There are tags we can use to create a separation between our elements. The tags we can use are `<hr>` and `<hr>`.
 
 * `<hr>` - this tag is used to create white space between elements
 * `<br>` - this tag is used to create an actual line to split the elements
@@ -211,12 +219,12 @@ There are tags we can use to create a seperation between our elements. The tags 
 There are two kind of lists we can create in HTML, the ordered and unordered list.
 
 `<ul>` - this is the tag used to create an unordered list
-* This will create a list like structure using bullet poiints
+* This will create a list-like structure using bullet poiints
 
 `<ol>` - this is the tag used to create an ordered list
-* This will create a list like structure using numbers
+* This will create a list-like structure using numbers
 
-`<li>` - this is the tag wqe will use to declare the content is a part of a list. It is short for `list item`
+`<li>` - this is the tag we will use to declare the content is a part of a list. It is short for `list item`
 
 Syntax:
 
@@ -285,14 +293,14 @@ We need to apply the `src` attribute to determine what image to show.
 Images also use an `alt` attribute to determine what text to show if that image is unavailable.
 
 ```html
-<img src="images/dog.png" alt="cute puppy" height="500" width="500">
+<img src="images/dog.png" alt="cute puppy" height="500" width="500"/>
 ```
 
 ### Form
 
 A `<form>` tag can be used to create a form in our HTML. This form can be used to collect user data.
 
-An HTML form contains `form elements`. Form elements are different types of input fields like text area, radio butotns, check boxes, etc.
+An HTML form contains `form elements`. Form elements are different types of input fields like text area, radio buttons, check boxes, etc.
 
 ```html
 <form>
@@ -348,8 +356,8 @@ There are three main ways that we can do CSS:
 
 1. Inline CSS
 
-This is where we use the `style=""` attribute on the opneing tag of a HTML element.
-We should always try to avoid adding css this way
+This is where we use the `style=""` attribute on the opening tag of a HTML element.
+We should always try to avoid adding css this way.
 
 2. Internal CSS
 
@@ -370,7 +378,7 @@ Then we will need to link our style sheet to our HTML file. Inside of the `<head
 
 Above there are three attributes associated with the `<link>` tag to link the style sheet:
 1. `rel` - this is the attribute where we tell the HTML file what the relation is
-2. `type' - this is where we declare the type of file
+2. `type` - this is where we declare the type of file
 3. `href` - this is where we declare the path to the style sheet we want to use
 
 ### Selectors
@@ -395,7 +403,7 @@ div {
 
 2. We can select an html class.
 
-On the html tag, we can give it an attribute of `class=""` to give it a class name. We can use classes to apply styles to multiple elements using that class name.
+On the html tag, we can give it an attribute of `class=""` to give it a class name. We can use classes to apply styles to multiple elements using that classname.
 
 HTML:
 ```html
@@ -415,7 +423,7 @@ We need to prefix our selector with a `.` to declare we are looking for a class.
 
 3. We can select an html id
 
-This is the same as the selecting a class, but we should never have more thaan one element with the same id.
+This is the same as the selecting a class, but we should never have more than one element with the same id.
 
 HTML:
 ```html
@@ -441,7 +449,7 @@ We can use a `,` to select multiple elements at once to apply the same styling.
 
 ```css
 h1, div, span {
-    color: blue,
+    color: blue;
     background-color: tomato;
 }
 ```
@@ -462,7 +470,7 @@ nav > div > h1 {
 
 CSS specificity refers to a set of rules that browsers use to determine which styles are applied when there is a conflict. 
 
-This set of rules work of a point system. Each select has a different point value given to it. The higher the point value, the more likely that style is to be applied to the element. We use this set of rules to determine how to can override or avoid overriding styles that conflict.
+This set of rules work on a point system. Each selector has a different point value given to it. The higher the point value, the more likely that style is to be applied to the element. We use this set of rules to determine how to override or avoid overriding styles that conflict.
 
 Point System:
 
@@ -508,7 +516,7 @@ Practices to help follow the DRY pattern:
 
 ### Reset CSS
 
-By default, the browser will apply it's own set of styling rules to the elements inside of an HTML file.
+By default, the browser will apply its own set of styling rules to the elements inside of an HTML file.
 
 We can use a `reset css` file to remove all default styling from a browser.
 
@@ -516,7 +524,7 @@ Check this website out to get a prebuilt reset css file: ![reset css](https://me
 
 ### Display Property
 
-The `display` property is a property can help aid us in setting up the lay out for each element.
+The `display` property is a property that can help aid us in setting up the lay out for each element.
 
 `display` has multiple values that we can give it:
 
@@ -571,7 +579,7 @@ There are many different properties we can modify:
 
 `font-family` - will determine what font family we want our text to be in
 
-`letter-spacing` - will determine how much white space should be bewtween each character
+`letter-spacing` - will determine how much white space should be between each character
 
 ### Background Properties
 
@@ -593,7 +601,7 @@ div {
 
 `background-repeat` - we can use this to choose how and if the background image should be repeated
 
-`background-color` - we can use this to change the color of a background on an element
+`background-color` - we can use this to change the background color of an element
 
 ### Box Model
 
@@ -610,7 +618,7 @@ Margin is the white space between each element
 Border is the border of the box
 
 3. Padding
-Padding is the white space between the content of an element and it's border
+Padding is the white space between the content of an element and its border
 
 4. Content
 The content of an element is anything inside of an element such as text, images, etc.
